@@ -70,7 +70,7 @@ Modèle prédictif pour maintenance prédictive industrielle
 - **📧 Email** : fionaudrey@gmail.com
 - **📱 Téléphone** : +33 6 10 64 09 29
 - **📍 Localisation** : Dijon, France
-- **💼 LinkedIn** : [Profil LinkedIn](https://www.linkedin.com/in/audrey-niampa)
+- **💼 LinkedIn** : [Profil LinkedIn]([https://www.linkedin.com/in/audrey-niampa](https://www.linkedin.com/in/audrey-oph%C3%A9lie-faasn%C3%A9wend%C3%A9-niampa/))
 
 ## 🌍 Langues
 
