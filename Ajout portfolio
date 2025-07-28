@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audrey NIAMPA - Data Analyst & BI Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .header .subtitle {
+            font-size: 1.3em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #555;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .nav-btn:hover, .nav-btn.active {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Sections */
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            display: none;
+        }
+
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .skill-category {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 25px;
+            border-radius: 15px;
+            color: white;
+        }
+
+        .skill-category h3 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            border-radius: 15px;
+            padding: 30px;
+            color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .project-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8em;
+        }
+
+        /* Experience Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            border-radius: 15px;
+            margin-left: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -45px;
+            top: 30px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .timeline-date {
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .timeline-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .timeline-company {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .about-info {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .about-text {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 2em; }
+            .contact-info { flex-direction: column; align-items: center; }
+            .about-content { grid-template-columns: 1fr; }
+            .projects-grid { grid-template-columns: 1fr; }
+            .skills-grid { grid-template-columns: 1fr; }
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Audrey NIAMPA</h1>
+            <div class="subtitle">Data Analyst • Business Intelligence • Machine Learning Engineer</div>
+            <p>Ingénieure ESIGELEC spécialisée Big Data | Expérience TotalEnergies | Passionnée par l'IA et la valorisation des données</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span> fionaudrey@gmail.com
+                </div>
+                <div class="contact-item">
+                    <span>📱</span> +33 6 10 64 09 29
+                </div>
+                <div class="contact-item">
+                    <span>📍</span> Le Havre, France
+                </div>
+                <div class="contact-item">
+                    <span>🌐</span> Disponible pour CDI
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <button class="nav-btn active" onclick="showSection('about')">À Propos</button>
+            <button class="nav-btn" onclick="showSection('skills')">Compétences</button>
+            <button class="nav-btn" onclick="showSection('projects')">Projets</button>
+            <button class="nav-btn" onclick="showSection('experience')">Expérience</button>
+            <button class="nav-btn" onclick="showSection('contact')">Contact</button>
+        </div>
+
+        <!-- About Section -->
+        <div id="about" class="section active">
+            <h2>À Propos</h2>
+            <div class="about-content">
+                <div class="about-info">
+                    <h3>🎓 Formation</h3>
+                    <p><strong>ESIGELEC</strong><br>
+                    Ingénieure généraliste<br>
+                    <span class="highlight">Dominante Big Data pour la Transformation Numérique</span></p>
+                    
+                    <h3 style="margin-top: 20px;">🌍 Langues</h3>
+                    <p>• <strong>Anglais</strong> - TOEIC 940<br>
+                    • <strong>Français</strong> - Courant<br>
+                    • <strong>Japonais</strong> - Débutant</p>
+                    
+                    <h3 style="margin-top: 20px;">💡 Centres d'intérêts</h3>
+                    <p>• Tricot et crochet<br>
+                    • Cuisine africaine et asiatique<br>
+                    • Couture<br>
+                    • Lecture</p>
+                </div>
+                
+                <div class="about-text">
+                    <p>Issue d'une solide formation d'ingénieure à l'ESIGELEC avec une spécialisation en <span class="highlight">Big Data et Transformation Numérique</span>, je possède une expérience pratique significative acquise notamment lors de mon alternance chez <span class="highlight">TotalEnergies</span>.</p>
+                    
+                    <p>Ma passion pour les données me pousse à <span class="highlight">transformer les chiffres en insights stratégiques</span>. J'ai développé une expertise dans la digitalisation de processus métier, la création de dashboards Power BI et l'implémentation de modèles de machine learning pour la détection d'anomalies.</p>
+                    
+                    <p>Mon profil hybride technique/business me permet de <span class="highlight">faire le pont entre les équipes techniques et métier</span>, en traduisant les besoins business en solutions data concrètes.</p>
+                    
+                    <p>Actuellement en recherche active d'un poste de <span class="highlight">Data Analyst ou Business Intelligence</span> en CDI, je suis motivée par la possibilité de contribuer à la prise de décision stratégique avec des analyses approfondies et des modèles prédictifs.</p>
+                    
+                    <a href="#contact" class="cta-button" onclick="showSection('contact')">Me Contacter</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Skills Section -->
+        <div id="skills" class="section">
+            <h2>Compétences Techniques</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>🐍 Langages de Programmation</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python (ML/DL)</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">PL/SQL</span>
+                        <span class="skill-tag">VBA</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🤖 Machine Learning & IA</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Régression Linéaire</span>
+                        <span class="skill-tag">Decision Tree</span>
+                        <span class="skill-tag">SVM</span>
+                        <span class="skill-tag">Clustering</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">ACP & PLS</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>📊 Visualisation & BI</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">DAX</span>
+                        <span class="skill-tag">Excel Avancé</span>
+                        <span class="skill-tag">ArcGIS Pro</span>
+                        <span class="skill-tag">Streamlit</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🗄️ Bases de Données</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">SQL Developer</span>
+                        <span class="skill-tag">PhpMyAdmin</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🔄 ETL & Big Data</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Talend</span>
+                        <span class="skill-tag">Alteryx</span>
+                        <span class="skill-tag">Hadoop</span>
+                        <span class="skill-tag">Hive</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>☁️ Cloud & DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Google Cloud Platform</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">GitLab</span>
+                        <span class="skill-tag">Jira</span>
+                        <span class="skill-tag">Trello</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>🕷️ Web Scraping</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Scrapy</span>
+                        <span class="skill-tag">Selenium</span>
+                        <span class="skill-tag">APIs REST</span>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>💻 Environnements</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Windows</span>
+                        <span class="skill-tag">Linux (Ubuntu/Debian)</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Anaconda</span>
+                        <span class="skill-tag">Eclipse</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Section -->
+        <div id="projects" class="section">
+            <h2>Projets Marquants</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>🏭 Digitalisation Cartes de Contrôle - TotalEnergies</h3>
+                    <p><strong>Automatisation complète du suivi qualité sur Power BI</strong></p>
+                    <p>• Extraction automatisée de données via VBA<br>
+                    • Création de mesures DAX conformes aux normes<br>
+                    • Gestion des droits d'accès par rôle<br>
+                    • Impact : Gain de temps de 70% sur le reporting qualité</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">VBA</span>
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">SQL</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>🔧 Détection d'Anomalies par Deep Learning</h3>
+                    <p><strong>Modèle prédictif pour maintenance prédictive</strong></p>
+                    <p>• Analyse de pompes à injection industrielles<br>
+                    • Nettoyage et préparation de datasets complexes<br>
+                    • Optimisation d'hyperparamètres<br>
+                    • Techniques ACP et PLS pour réduction dimensionnelle</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Deep Learning</span>
+                        <span class="tech-tag">ACP/PLS</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>📡 Localisation RFID par IA</h3>
+                    <p><strong>Interface Streamlit pour détection de mouvements</strong></p>
+                    <p>• Comparaison modèles Machine Learning vs Deep Learning<br>
+                    • Interface utilisateur intuitive avec Streamlit<br>
+                    • Optimisation des performances de détection<br>
+                    • Documentation technique complète</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Streamlit</span>
+                        <span class="tech-tag">ML/DL</span>
+                        <span class="tech-tag">RFID</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>☁️ Déploiement Application NoSQL</h3>
+                    <p><strong>Architecture complète sur Google Cloud Platform</strong></p>
+                    <p>• Containerisation avec Docker<br>
+                    • Déploiement sur GCP avec services managés<br>
+                    • Base de données NoSQL optimisée<br>
+                    • Pipeline CI/CD automatisé</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">GCP</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">NoSQL</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>🌍 Data Science Géographique</h3>
+                    <p><strong>Analyse prédictive de données géospatiales</strong></p>
+                    <p>• Traitement de datasets géographiques complexes<br>
+                    • Modèles prédictifs multi-algorithmes<br>
+                    • Visualisations cartographiques interactives<br>
+                    • Documentation et synthèses métier</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">ArcGIS Pro</span>
+                        <span class="tech-tag">ML Models</span>
+                        <span class="tech-tag">Géospatial</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>📈 Dashboard BI - Actemium</h3>
+                    <p><strong>Optimisation du suivi contractuel</strong></p>
+                    <p>• Analyse approfondie de contrats électricité<br>
+                    • Reporting automatisé sur Power BI<br>
+                    • Indicateurs de performance clés<br>
+                    • Support utilisateur et formation</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">Excel</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">KPI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience Section -->
+        <div id="experience" class="section">
+            <h2>Expérience Professionnelle</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">Septembre 2022 - Août 2023</div>
+                    <div class="timeline-title">Alternante BI - Contrat de Professionnalisation</div>
+                    <div class="timeline-company">TotalEnergies • Le Havre, Normandie</div>
+                    <p><strong>Mission principale :</strong> Digitalisation et automatisation du suivi des cartes de contrôles qualité</p>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Extraction automatisée de données en VBA depuis systèmes industriels</li>
+                        <li>Création de mesures DAX complexes pour conformité aux normes qualité</li>
+                        <li>Gestion des droits d'accès et diffusion par rôle métier</li>
+                        <li>Développement de modèles de deep learning pour détection d'anomalies sur équipements industriels</li>
+                        <li><strong>Impact :</strong> Réduction de 70% du temps de reporting, amélioration de la traçabilité</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Mai - Juillet 2022</div>
+                    <div class="timeline-title">Stagiaire Consultant BI</div>
+                    <div class="timeline-company">Actemium • Le Havre, Normandie</div>
+                    <p><strong>Mission :</strong> Optimisation du suivi contractuel électricité et instrumentation</p>
+                    <ul style="margin-top: 10px; padding-left: 20px;">
+                        <li>Analyse approfondie des données contractuelles</li>
+                        <li>Création de dashboards Power BI pour le suivi de performance</li>
+                        <li>Optimisation des processus de reporting existants</li>
+                        <li>Support utilisateur et formation aux nouveaux outils</li>
+                    </ul>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-date">Août - Septembre 2021</div>
+                    <div class="timeline-title">Agent de Production</div>
+                    <div class="timeline-company">Plate-forme Courrier Industriel (PIC) • Saint-Étienne-du-Rouvray</div>
+                    <p>Expérience opérationnelle dans un environnement industriel, développement de la rigueur et de l'efficacité</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="section">
+            <h2>Me Contacter</h2>
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 1.2em; margin-bottom: 30px;">
+                    Actuellement en recherche active d'un poste de <span class="highlight">Data Analyst ou Business Intelligence</span> en CDI.
+                    N'hésitez pas à me contacter pour discuter d'opportunités !
+                </p>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px;">
+                    <div style="background: linear-gradient(135deg, #667eea, #764ba2); padding: 30px; border-radius: 15px; color: white;">
+                        <h3>📧 Email</h3>
+                        <p style="margin: 15px 0;">fionaudrey@gmail.com</p>
+                        <a href="mailto:fionaudrey@gmail.com" class="cta-button" style="background: rgba(255,255,255,0.2); color: white;">Envoyer un email</a>
+                    </div>
+                    
+                    <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); padding: 30px; border-radius: 15px; color: white;">
+                        <h3>📱 Téléphone</h3>
+                        <p style="margin: 15px 0;">+33 6 10 64 09 29</p>
+                        <a href="tel:+33610640929" class="cta-button" style="background: rgba(255,255,255,0.2); color: white;">Appeler</a>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #ffecd2, #fcb69f); border-radius: 15px;">
+                    <h3>🎯 Recherche Active</h3>
+                    <p><strong>Type de poste :</strong> Data Analyst • Business Intelligence • Data Scientist</p>
+                    <p><strong>Contrat :</strong> CDI</p>
+                    <p><strong>Localisation :</strong> France (mobilité géographique)</p>
+                    <p><strong>Disponibilité :</strong> Immédiate</p>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <h3>🤝 Engagements Associatifs</h3>
+                    <p>• <strong>Membre de Esig'Afrik</strong> - Promotion de la diversité dans le numérique</p>
+                    <p>• <strong>Responsable logistique et trésorerie - Each One</strong> - Aide à l'intégration des réfugiés</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Remove active class from all nav buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            // Show target section
+            document.getElementById(sectionId).classList.add('active');
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add some interactivity to project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
