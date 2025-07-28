@@ -322,7 +322,7 @@
                     <span>📱</span> +33 6 10 64 09 29
                 </div>
                 <div class="contact-item">
-                    <span>📍</span> Le Havre, France
+                    <span>📍</span> Dijon, France
                 </div>
                 <div class="contact-item">
                     <span>🌐</span> Data Analyst chez Kardham
@@ -591,14 +591,14 @@
                 <div class="timeline-item">
                     <div class="timeline-date">2023 - Présent</div>
                     <div class="timeline-title">Data Analyst - Gestion de Grands Projets</div>
-                    <div class="timeline-company">KARDHAM • Dijon / Paris</div>
+                    <div class="timeline-company">KARDHAM • Dijon, France</div>
                     <p><strong>Mission :</strong> Accompagnement de grands comptes dans leurs projets de transformation digitale</p>
                     <ul style="margin-top: 10px; padding-left: 20px;">
                         <li><strong>AXA France :</strong> Développement de scripts automatisés pour traitement de grands volumes de données</li>
                         <li><strong>Kardham Digital :</strong> Restructuration complète de l'architecture de stockage on-premise</li>
                         <li><strong>Caisse des dépôts :</strong> Implémentation de tableaux de bord multi-sites</li>
                         <li><strong>Deloitte, Vilogia, Saint Gobain :</strong> Dashboards d'occupation avec optimisation O365</li>
-                        <li><strong>Technologies :</strong> Python, Power BI, architectures de données, automatisation</li>
+                        <li><strong>Technologies :</strong> Python, C#, Power BI, architectures de données, automatisation</li>
                     </ul>
                 </div>
                 
@@ -665,6 +665,7 @@
                     <h3>💼 Situation Actuelle</h3>
                     <p><strong>Poste :</strong> Data Analyst chez Kardham</p>
                     <p><strong>Expérience :</strong> +1 an en poste</p>
+                    <p><strong>Certifications :</strong> Microsoft C# Developer (2024) • PL-300 en cours</p>
                     <p><strong>Spécialités :</strong> Scripts automatisés • Architecture données • Dashboards BI</p>
                     <p><strong>Clients :</strong> AXA France, Deloitte, Saint Gobain, Vilogia, Caisse des dépôts</p>
                 </div>
@@ -680,6 +681,8 @@
 
     <script>
         function showSection(sectionId) {
+            console.log('Attempting to show section:', sectionId);
+            
             // Hide all sections
             document.querySelectorAll('.section').forEach(section => {
                 section.classList.remove('active');
@@ -691,11 +694,44 @@
             });
             
             // Show target section
-            document.getElementById(sectionId).classList.add('active');
+            const targetSection = document.getElementById(sectionId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                console.log('Section shown successfully:', sectionId);
+            } else {
+                console.error('Section not found:', sectionId);
+            }
             
             // Add active class to clicked button
-            event.target.classList.add('active');
+            if (event && event.target) {
+                event.target.classList.add('active');
+            }
         }
+
+        // Add click event listeners to all nav buttons
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, setting up navigation');
+            
+            // Ensure the about section is visible by default
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                aboutSection.classList.add('active');
+            }
+            
+            // Add event listeners to nav buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    const sectionId = this.textContent.toLowerCase()
+                        .replace('à propos', 'about')
+                        .replace('compétences', 'skills')
+                        .replace('projets', 'projects')
+                        .replace('expérience', 'experience')
+                        .replace('contact', 'contact');
+                    
+                    showSection(sectionId);
+                });
+            });
+        });
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -711,13 +747,15 @@
         });
 
         // Add some interactivity to project cards
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
             });
         });
     </script>
