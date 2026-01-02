@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audrey NIAMPA - Data Analyst & BI Specialist</title>
+    <title>Audrey NIAMPA - Data Analyst</title>
     <style>
         * {
             margin: 0;
@@ -25,7 +25,6 @@
             padding: 20px;
         }
 
-        /* Header */
         .header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -47,7 +46,12 @@
         .header .subtitle {
             font-size: 1.3em;
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #888;
+            font-size: 1.1em;
         }
 
         .contact-info {
@@ -65,7 +69,6 @@
             color: #555;
         }
 
-        /* Navigation */
         .nav {
             display: flex;
             justify-content: center;
@@ -93,7 +96,6 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        /* Sections */
         .section {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -123,7 +125,6 @@
             text-align: center;
         }
 
-        /* Skills Grid */
         .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -157,7 +158,6 @@
             backdrop-filter: blur(10px);
         }
 
-        /* Projects Grid */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -197,7 +197,6 @@
             font-size: 0.8em;
         }
 
-        /* Experience Timeline */
         .timeline {
             position: relative;
             padding-left: 30px;
@@ -253,7 +252,6 @@
             margin-bottom: 15px;
         }
 
-        /* About Section */
         .about-content {
             display: grid;
             grid-template-columns: 1fr 2fr;
@@ -279,7 +277,6 @@
             font-weight: bold;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .header h1 { font-size: 2em; }
             .contact-info { flex-direction: column; align-items: center; }
@@ -311,8 +308,8 @@
         <!-- Header -->
         <div class="header">
             <h1>Audrey NIAMPA</h1>
-            <div class="subtitle">Data Analyst chez Kardham • +1 an d'expérience • Grands Comptes</div>
-            <p>Ingénieure ESIGELEC | Spécialiste données & BI | Projets AXA, Deloitte, Saint Gobain | Expert Python & Power BI</p>
+            <div class="subtitle">Data Analyst → Data Engineer • Ingénieure ESIGELEC</div>
+            <p>Je transforme les données en solutions concrètes</p>
             
             <div class="contact-info">
                 <div class="contact-item">
@@ -324,9 +321,6 @@
                 <div class="contact-item">
                     <span>📍</span> Dijon, France
                 </div>
-                <div class="contact-item">
-                    <span>🌐</span> Data Analyst chez Kardh am
-                </div>
             </div>
         </div>
 
@@ -335,7 +329,7 @@
             <button class="nav-btn active" data-section="about">À Propos</button>
             <button class="nav-btn" data-section="skills">Compétences</button>
             <button class="nav-btn" data-section="projects">Projets</button>
-            <button class="nav-btn" data-section="experience">Expérience</button>
+            <button class="nav-btn" data-section="experience">Parcours</button>
             <button class="nav-btn" data-section="contact">Contact</button>
         </div>
 
@@ -346,141 +340,95 @@
                 <div class="about-info">
                     <h3>🎓 Formation</h3>
                     <p><strong>ESIGELEC Rouen</strong><br>
-                    Diplôme d'Ingénieur généraliste<br>
-                    <span class="highlight">Dominante Big Data pour la Transformation Numérique</span><br>
+                    Diplôme d'Ingénieur<br>
+                    Big Data & Transformation Numérique<br>
                     2020-2023</p>
                     
-                    <h3 style="margin-top: 20px;">🌍 Langues</h3>
-                    <p>• <strong>Anglais</strong> - TOEIC 940<br>
-                    • <strong>Français</strong> - Courant<br>
-                    • <strong>Japonais</strong> - Débutant</p>
-                    
                     <h3 style="margin-top: 20px;">🏆 Certifications</h3>
-                    <p>• <strong>Microsoft C# Developer</strong> - Juillet 2024<br>
-                    • <strong>PL-300 Power BI Data Analyst</strong> - En cours<br>
-                    • <strong>TOEIC</strong> - Score 940/990</p>
+                    <p><strong>Power BI (Coursera)</strong><br>
+                    • Data Analysis & Visualization<br>
+                    • Data Modeling<br>
+                    • ETL (Extract, Transform, Load)<br>
+                    • Creative Designing<br>
+                    • Deploy & Maintain Assets<br>
+                    • DAX Formulas<br>
+                    • Harnessing Power of Data<br>
+                    • Preparing Data with Excel<br><br>
+                    <strong>Microsoft</strong><br>
+                    • PL-300 Power BI Data Analyst (en cours)<br><br>
+                    <strong>Développement</strong><br>
+                    • Foundational C# (freeCodeCamp)<br><br>
+                    <strong>Langues</strong><br>
+                    • TOEIC 940/990</p>
                     
-                    <h3 style="margin-top: 20px;">💡 Centres d'intérêts</h3>
-                    <p>• Développement logiciel<br>
-                    • Cuisine africaine et asiatique<br>
-                    • Tricot et crochet<br>
-                    • Lecture technique</p>
+                    <h3 style="margin-top: 20px;">🌍 Langues</h3>
+                    <p>• Anglais - Courant<br>
+                    • Français - Natif<br>
+                    • Japonais - Débutant</p>
                 </div>
                 
                 <div class="about-text">
-                    <p>Issue d'une solide formation d'ingénieure à l'ESIGELEC avec une spécialisation en <span class="highlight">Big Data et Transformation Numérique</span>, j'ai acquis plus d'un an d'expérience professionnelle en tant que <span class="highlight">Data Analyst chez Kardham</span>, après mon alternance réussie chez <span class="highlight">TotalEnergies</span>.</p>
+                    <p>Diplômée de l'ESIGELEC en Big Data, j'ai démarré ma carrière chez TotalEnergies où j'ai digitalisé le suivi qualité, réduisant de 70% le temps de reporting.</p>
                     
-                    <p>Chez Kardham, j'accompagne des <span class="highlight">grands comptes prestigieux</span> (AXA France, Deloitte, Saint Gobain, Vilogia, Caisse des dépôts) dans leurs projets de transformation digitale. Ma spécialité : <span class="highlight">développer des scripts automatisés</span> et créer des architectures de données robustes qui répondent aux besoins métier spécifiques.</p>
+                    <p>Aujourd'hui chez Kardham, je développe des pipelines de données end-to-end : scraping Selenium orchestré par Airflow, traitement C# temps réel sur IoT (occupancy, consommation, people counting), décodage de docs constructeur. Je structure les données brutes en jobs par type, j'optimise avec des agrégations conditionnelles et des vues matérialisées TimescaleDB.</p>
                     
-                    <p>Mon expertise couvre la <span class="highlight">gestion de projets end-to-end</span> : de la collecte automatisée de données jusqu'à la mise en production de dashboards interactifs, en passant par l'implémentation de modèles de machine learning pour la détection d'anomalies. Ma <span class="highlight">certification Microsoft C# Developer</span> (2024) et ma formation <span class="highlight">PL-300 Power BI Data Analyst</span> en cours renforcent mon expertise technique.</p>
+                    <p>Python, C#, SQL, Airflow : j'aime quand la technique rencontre le concret.</p>
                     
-                    <p>Passionnée par l'innovation data, je continue à <span class="highlight">développer mes compétences</span> en deep learning et cloud computing pour apporter des solutions toujours plus performantes à mes clients.</p>
-                    
-                    <a href="#" class="cta-button" data-section="projects">Découvrir mes Projets</a>
+                    <a href="#" class="cta-button" data-section="projects">Voir mes projets</a>
                 </div>
             </div>
         </div>
 
         <!-- Skills Section -->
         <div id="skills" class="section">
-            <h2>Compétences Techniques</h2>
+            <h2>Compétences</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>🏆 Certifications</h3>
+                    <h3>💻 Langages</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Microsoft C# Developer (2024)</span>
-                        <span class="skill-tag">PL-300 en cours</span>
-                        <span class="skill-tag">TOEIC 940</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>🐍 Langages de Programmation</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python (ML/DL)</span>
-                        <span class="skill-tag">C# (Certifié MS)</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C#</span>
                         <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">PL/SQL</span>
                         <span class="skill-tag">VBA</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">PHP</span>
-                        <span class="skill-tag">HTML/CSS</span>
                     </div>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>🤖 Machine Learning & IA</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Régression Linéaire</span>
-                        <span class="skill-tag">Decision Tree</span>
-                        <span class="skill-tag">SVM</span>
-                        <span class="skill-tag">Clustering</span>
-                        <span class="skill-tag">Deep Learning</span>
-                        <span class="skill-tag">ACP & PLS</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>📊 Visualisation & BI</h3>
+                    <h3>📊 BI & Visualisation</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Power BI</span>
-                        <span class="skill-tag">Tableau</span>
                         <span class="skill-tag">DAX</span>
-                        <span class="skill-tag">Excel Avancé</span>
-                        <span class="skill-tag">ArcGIS Pro</span>
-                        <span class="skill-tag">Streamlit</span>
+                        <span class="skill-tag">Tableau</span>
                     </div>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>🗄️ Bases de Données</h3>
+                    <h3>🗄️ Données</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">TimescaleDB</span>
                         <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">SQL Developer</span>
-                        <span class="skill-tag">PhpMyAdmin</span>
+                        <span class="skill-tag">ETL (Talend, Alteryx)</span>
                     </div>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>🔄 ETL & Big Data</h3>
+                    <h3>☁️ Cloud & Outils</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Talend</span>
-                        <span class="skill-tag">Alteryx</span>
-                        <span class="skill-tag">Hadoop</span>
-                        <span class="skill-tag">Hive</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>☁️ Cloud & DevOps</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Google Cloud Platform</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">GitHub</span>
-                        <span class="skill-tag">GitLab</span>
-                        <span class="skill-tag">Jira</span>
-                        <span class="skill-tag">Trello</span>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>🕷️ Web Scraping</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Scrapy</span>
+                        <span class="skill-tag">Airflow</span>
                         <span class="skill-tag">Selenium</span>
-                        <span class="skill-tag">APIs REST</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
                     </div>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>💻 Environnements</h3>
+                    <h3>🤖 Machine Learning</h3>
                     <div class="skill-tags">
-                        <span class="skill-tag">Windows</span>
-                        <span class="skill-tag">Linux (Ubuntu/Debian)</span>
-                        <span class="skill-tag">VS Code</span>
-                        <span class="skill-tag">Anaconda</span>
-                        <span class="skill-tag">Eclipse</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">ACP/PLS</span>
                     </div>
                 </div>
             </div>
@@ -488,96 +436,85 @@
 
         <!-- Projects Section -->
         <div id="projects" class="section">
-            <h2>Projets Marquants</h2>
+            <h2>Projets</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>🏢 Scripts Automatisés - AXA France</h3>
-                    <p><strong>Développement de solutions automatisées pour grands volumes</strong></p>
-                    <p>• Développement de scripts automatisés répondant aux besoins identifiés<br>
-                    • Traitement de données collectées et usages finaux prévus<br>
-                    • Génération efficace de fichiers finaux pour l'envoi<br>
-                    • Optimisation des processus et réduction des erreurs manuelles</p>
+                    <h3>🔋 Dashboard Monitoring Batterie</h3>
+                    <p>Suivi temps réel de 500+ capteurs IoT. Détection anomalies, alertes critiques (<20%), analyse variations 7j/30j, prédiction durée restante. DAX avancé pour calcul décharge et identification capteurs inactifs.</p>
                     <div class="project-tech">
+                        <span class="tech-tag">Power BI</span>
+                        <span class="tech-tag">DAX</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Alerting</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>🤖 Pipeline Selenium + Airflow - AXA</h3>
+                    <p>Scraping automatisé avec Selenium, orchestration Airflow. Export CSV des données brutes, décodage de docs constructeur, traitement et structuration pour exploitation.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">Airflow</span>
                         <span class="tech-tag">Python</span>
-                        <span class="tech-tag">C#</span>
-                        <span class="tech-tag">Scripts</span>
-                        <span class="tech-tag">Automatisation</span>
                         <span class="tech-tag">ETL</span>
                     </div>
                 </div>
                 
                 <div class="project-card">
-                    <h3>🏗️ Architecture de Stockage - Kardham Digital</h3>
-                    <p><strong>Restructuration complète de l'architecture données</strong></p>
-                    <p>• Restructuration architecture de stockage des données<br>
-                    • Solution de stockage on-premise et local optimisée<br>
-                    • Amélioration sécurité, performance et fiabilité<br>
-                    • Conformité réglementaire et besoins clients spécifiques</p>
+                    <h3>⚡ Pipelines IoT en C#</h3>
+                    <p>Traitement temps réel de données IoT : récupération tables brutes, jobs par type (occupancy, consommation, people counting). Agrégation conditionnelle par quarters/heures/jours avec vues matérialisées TimescaleDB. Optimisation : pas de données = pas de calcul.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">Architecture Data</span>
-                        <span class="tech-tag">On-Premise</span>
-                        <span class="tech-tag">Sécurité</span>
-                        <span class="tech-tag">Performance</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">TimescaleDB</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">Vues matérialisées</span>
                     </div>
                 </div>
                 
                 <div class="project-card">
-                    <h3>🏨 Dashboards d'Occupation - Multi-clients</h3>
-                    <p><strong>Tableaux de bord pour Deloitte, Vilogia, Saint Gobain</strong></p>
-                    <p>• Implémentation dashboards occupation multi-sites<br>
-                    • Aspects dédiés : espaces, confort intérieur, réservation O365<br>
-                    • Optimisation Opti pour plusieurs sites simultanés<br>
-                    • Interface utilisateur intuitive et responsive</p>
+                    <h3>🏢 Scripts Automatisés - Multi-clients</h3>
+                    <p>Scripts Python/C# pour traiter automatiquement grands volumes de données. Génération de fichiers finaux sans intervention manuelle.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Automatisation</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>🏗️ Architecture Data - Kardham</h3>
+                    <p>Refonte complète du stockage on-premise. Sécurité renforcée, performances améliorées, conformité garantie.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Architecture</span>
+                        <span class="tech-tag">Sécurité</span>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>🏨 Dashboards Multi-clients</h3>
+                    <p>Tableaux de bord d'occupation pour Deloitte, Vilogia, Saint Gobain. Données en temps réel, interface simple.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Power BI</span>
-                        <span class="tech-tag">Dashboards</span>
                         <span class="tech-tag">O365</span>
-                        <span class="tech-tag">Multi-sites</span>
                     </div>
                 </div>
                 
                 <div class="project-card">
-                    <h3>🔧 Détection d'Anomalies par Deep Learning</h3>
-                    <p><strong>Modèle prédictif pour maintenance prédictive</strong></p>
-                    <p>• Analyse de pompes à injection industrielles<br>
-                    • Nettoyage et préparation de datasets complexes<br>
-                    • Optimisation d'hyperparamètres<br>
-                    • Techniques ACP et PLS pour réduction dimensionnelle</p>
+                    <h3>🔧 Détection d'Anomalies</h3>
+                    <p>Modèle de deep learning pour prévoir les pannes de pompes industrielles. Réduction dimensionnelle par ACP.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Deep Learning</span>
-                        <span class="tech-tag">ACP/PLS</span>
-                        <span class="tech-tag">Scikit-learn</span>
                     </div>
                 </div>
                 
                 <div class="project-card">
-                    <h3>🏭 Digitalisation Cartes de Contrôle - TotalEnergies</h3>
-                    <p><strong>Automatisation complète du suivi qualité sur Power BI</strong></p>
-                    <p>• Extraction automatisée de données via VBA<br>
-                    • Création de mesures DAX conformes aux normes<br>
-                    • Gestion des droits d'accès par rôle<br>
-                    • Impact : Gain de temps de 70% sur le reporting qualité</p>
+                    <h3>🏭 Digitalisation - TotalEnergies</h3>
+                    <p>Automatisation du suivi qualité sur Power BI. Extraction VBA, mesures DAX conformes. Gain de temps : 70%.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Power BI</span>
                         <span class="tech-tag">VBA</span>
                         <span class="tech-tag">DAX</span>
-                        <span class="tech-tag">SQL</span>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <h3>📈 Optimisation Contrats - Actemium</h3>
-                    <p><strong>Dashboard BI pour suivi contractuel électricité</strong></p>
-                    <p>• Analyse approfondie de contrats électricité<br>
-                    • Reporting automatisé sur Power BI<br>
-                    • Processus d'intervention optimisé par les ouvriers<br>
-                    • Transparence des activités et prise de décision facilitée</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Power BI</span>
-                        <span class="tech-tag">Excel</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Process Mining</span>
                     </div>
                 </div>
             </div>
@@ -585,65 +522,57 @@
 
         <!-- Experience Section -->
         <div id="experience" class="section">
-            <h2>Expérience Professionnelle</h2>
+            <h2>Parcours</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <div class="timeline-date">2023 - Présent</div>
-                    <div class="timeline-title">Data Analyst - Gestion de Grands Projets</div>
-                    <div class="timeline-company">KARDHAM • Dijon, France</div>
-                    <p><strong>Mission :</strong> Accompagnement de grands comptes dans leurs projets de transformation digitale</p>
-                    <ul style="margin-top: 10px; padding-left: 20px;">
-                        <li><strong>AXA France :</strong> Développement de scripts automatisés pour traitement de grands volumes de données</li>
-                        <li><strong>Kardham Digital :</strong> Restructuration complète de l'architecture de stockage on-premise</li>
-                        <li><strong>Caisse des dépôts :</strong> Implémentation de tableaux de bord multi-sites</li>
-                        <li><strong>Deloitte, Vilogia, Saint Gobain :</strong> Dashboards d'occupation avec optimisation O365</li>
-                        <li><strong>Technologies :</strong> Python, C#, Power BI, architectures de données, automatisation</li>
+                    <div class="timeline-date">2023 - Aujourd'hui</div>
+                    <div class="timeline-title">Data Analyst → Data Engineer</div>
+                    <div class="timeline-company">Kardham • Dijon</div>
+                    <p><strong>Clients :</strong> AXA, Deloitte, Saint Gobain, Vilogia, Caisse des dépôts</p>
+                    <p><strong>Stack technique :</strong></p>
+                    <ul style="margin-top: 10px; padding-left: 20px; line-height: 1.8;">
+                        <li>Pipelines C# pour IoT temps réel (500+ capteurs, 14GB+ de données)</li>
+                        <li>Scraping Selenium orchestré par Airflow, décodage docs constructeur</li>
+                        <li>Agrégations conditionnelles sur TimescaleDB (quarters, heures, jours)</li>
+                        <li>Dashboards Power BI : monitoring batterie, occupation multi-sites</li>
+                        <li>Architecture data : restructuration stockage on-premise</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>Relation client :</strong></p>
+                    <ul style="margin-top: 10px; padding-left: 20px; line-height: 1.8;">
+                        <li>Animation d'ateliers techniques avec les clients</li>
+                        <li>Présentations de solutions et démonstrations produits</li>
+                        <li>Support utilisateur : résolution de tickets et accompagnement</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-date">Septembre 2022 - Août 2023</div>
-                    <div class="timeline-title">Alternante BI - Contrat de Professionnalisation</div>
-                    <div class="timeline-company">TotalEnergies • Le Havre, Normandie</div>
-                    <p><strong>Mission principale :</strong> Digitalisation et automatisation du suivi des cartes de contrôles qualité</p>
-                    <ul style="margin-top: 10px; padding-left: 20px;">
-                        <li>Extraction automatisée de données en VBA depuis systèmes industriels</li>
-                        <li>Création de mesures DAX complexes pour conformité aux normes qualité</li>
-                        <li>Gestion des droits d'accès et diffusion par rôle métier</li>
-                        <li>Développement de modèles de deep learning pour détection d'anomalies sur équipements industriels</li>
-                        <li><strong>Impact :</strong> Réduction de 70% du temps de reporting, amélioration de la traçabilité</li>
+                    <div class="timeline-date">2022 - 2023</div>
+                    <div class="timeline-title">Alternante BI</div>
+                    <div class="timeline-company">TotalEnergies • Le Havre</div>
+                    <p><strong>Digitalisation du suivi qualité industriel</strong></p>
+                    <ul style="margin-top: 10px; padding-left: 20px; line-height: 1.8;">
+                        <li>Extraction automatisée VBA depuis systèmes industriels</li>
+                        <li>Dashboards Power BI avec mesures DAX conformes aux normes qualité</li>
+                        <li>Modèles deep learning pour détection d'anomalies sur pompes industrielles</li>
+                        <li><strong>Impact :</strong> Réduction de 70% du temps de reporting</li>
                     </ul>
                 </div>
                 
                 <div class="timeline-item">
-                    <div class="timeline-date">Mai - Juillet 2022</div>
+                    <div class="timeline-date">2022</div>
                     <div class="timeline-title">Stagiaire Consultant BI</div>
-                    <div class="timeline-company">Actemium • Le Havre, Normandie</div>
-                    <p><strong>Mission :</strong> Optimisation du suivi contractuel électricité et instrumentation</p>
-                    <ul style="margin-top: 10px; padding-left: 20px;">
-                        <li>Analyse approfondie des données contractuelles</li>
-                        <li>Création de dashboards Power BI pour le suivi de performance</li>
-                        <li>Processus d'intervention optimisé avec transparence des activités</li>
-                        <li>Support utilisateur et formation aux nouveaux outils</li>
-                    </ul>
-                </div>
-                
-                <div class="timeline-item">
-                    <div class="timeline-date">Août - Septembre 2021</div>
-                    <div class="timeline-title">Agent de Production</div>
-                    <div class="timeline-company">Plate-forme Courrier Industriel (PIC) • Saint-Étienne-du-Rouvray</div>
-                    <p>Expérience opérationnelle dans un environnement industriel, développement de la rigueur et de l'efficacité</p>
+                    <div class="timeline-company">Actemium • Le Havre</div>
+                    <p>Optimisation du suivi contractuel électricité via Power BI. Création de dashboards pour transparence des interventions et aide à la décision.</p>
                 </div>
             </div>
         </div>
 
         <!-- Contact Section -->
         <div id="contact" class="section">
-            <h2>Me Contacter</h2>
+            <h2>Contact</h2>
             <div style="text-align: center; max-width: 600px; margin: 0 auto;">
                 <p style="font-size: 1.2em; margin-bottom: 30px;">
-                    Actuellement <span class="highlight">Data Analyst chez Kardham</span>, je travaille sur des projets passionnants avec des grands comptes.
-                    N'hésitez pas à me contacter pour échanger sur la data et les projets innovants !
+                    Envie d'échanger sur la data ? Contactez-moi.
                 </p>
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-top: 40px;">
@@ -659,59 +588,37 @@
                         <a href="tel:+33610640929" class="cta-button" style="background: rgba(255,255,255,0.2); color: white;">Appeler</a>
                     </div>
                 </div>
-                
-                <div style="margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #ffecd2, #fcb69f); border-radius: 15px;">
-                    <h3>💼 Situation Actuelle</h3>
-                    <p><strong>Poste :</strong> Data Analyst chez Kardham</p>
-                    <p><strong>Expérience :</strong> +1 an en poste</p>
-                    <p><strong>Certifications :</strong> Microsoft C# Developer (2024) • PL-300 en cours</p>
-                    <p><strong>Spécialités :</strong> Scripts automatisés • Architecture données • Dashboards BI</p>
-                    <p><strong>Clients :</strong> AXA France, Deloitte, Saint Gobain, Vilogia, Caisse des dépôts</p>
-                </div>
-                
-                <div style="margin-top: 30px;">
-                    <h3>🤝 Engagements Associatifs</h3>
-                    <p>• <strong>Membre de Esig'Afrik</strong> - Promotion de la diversité dans le numérique</p>
-                    <p>• <strong>Responsable logistique et trésorerie - Each One</strong> - Aide à l'intégration des réfugiés</p>
-                </div>
             </div>
         </div>
     </div>
 
     <script>
         function showSection(sectionId) {
-            // Hide all sections
             document.querySelectorAll('.section').forEach(section => {
                 section.classList.remove('active');
             });
             
-            // Remove active class from all nav buttons
             document.querySelectorAll('.nav-btn').forEach(btn => {
                 btn.classList.remove('active');
             });
             
-            // Show target section
             const targetSection = document.getElementById(sectionId);
             if (targetSection) {
                 targetSection.classList.add('active');
             }
             
-            // Add active class to corresponding nav button
             const targetBtn = document.querySelector(`[data-section="${sectionId}"]`);
             if (targetBtn) {
                 targetBtn.classList.add('active');
             }
         }
 
-        // Add click event listeners when DOM is loaded
         document.addEventListener('DOMContentLoaded', function() {
-            // Ensure the about section is visible by default
             const aboutSection = document.getElementById('about');
             if (aboutSection) {
                 aboutSection.classList.add('active');
             }
             
-            // Add event listeners to nav buttons and CTA buttons
             document.querySelectorAll('[data-section]').forEach(element => {
                 element.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -719,10 +626,7 @@
                     showSection(sectionId);
                 });
             });
-        });
-
-        // Add some interactivity to project cards
-        document.addEventListener('DOMContentLoaded', function() {
+            
             document.querySelectorAll('.project-card').forEach(card => {
                 card.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-10px) scale(1.02)';
